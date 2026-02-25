@@ -82,11 +82,11 @@ q2cli
 : [q2cli](https://github.com/qiime2/q2cli) is the original (and still primary, as of March 2024) command line interface for QIIME 2.
 
 qza
-: An acronym for **Q*IIME **Z**ipped **A**rtifact.
+: An acronym for **Q**IIME **Z**ipped **A**rtifact.
   See {term}`artifact`.
 
 qzv
-: An acronym for **Q*IIME **Z**ipped **V**isualization.
+: An acronym for **Q**IIME **Z**ipped **V**isualization.
   See {term}`visualization`.
 
 result
