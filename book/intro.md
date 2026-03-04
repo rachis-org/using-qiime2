@@ -60,7 +60,7 @@ The list of these is growing, but some current (as of 28 February 2025) examples
 ### Dataset-specific documentation
 
 We expect to increasingly have documentation that is focused on analysis of specific interesting data sets.
-Good examples are the new [gut-to-soil tutorial](https://gut-to-soil-tutorial.readthedocs.io/en/stable/) and the classic [Moving Pictures tutorial](https://moving-pictures-tutorial.readthedocs.io/en/stable/).
+Good examples are the new [gut-to-soil tutorial](https://gut-to-soil-tutorial.readthedocs.io/en/latest/) and the classic [Moving Pictures tutorial](https://moving-pictures-tutorial.readthedocs.io/en/latest/).
 These will sometimes cross distributions and stand-alone plugins, for example integrating tools from *MOSHPIT*, `q2-boots`, and perhaps even [metabolomics plugins](https://doi.org/10.1038/s41596-024-01046-3), to illustrate microbiome multi-omics analysis workflows.
 
 ### QIIME 2 Framework (Q2F) documentation 💃🏻
