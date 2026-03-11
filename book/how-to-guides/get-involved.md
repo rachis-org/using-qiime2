@@ -40,7 +40,7 @@ When the new page goes live, [we'll provide instructions](https://github.com/cap
 ## Build a plugin
 
 If you're a developer and want to add functionality to the QIIME 2 ecosystem, consider creating a plugin.
-You can find detailed documentation in [*Developing with QIIME 2*](https://develop.qiime2.org) on [how to build a plugin](https://develop.qiime2.org/en/stable/plugins/tutorials/intro.html), [how to have it listed on the QIIME 2 Library](https://develop.qiime2.org/en/stable/plugins/how-to-guides/distribute-on-library.html), [tips on how to publicize it](https://develop.qiime2.org/en/stable/plugins/how-to-guides/publicize.html), and more.
+You can find detailed documentation in [*Developing with QIIME 2*](https://develop.qiime2.org) on [how to build a plugin](https://develop.qiime2.org/en/2026.1/plugins/tutorials/intro.html), [how to have it listed on the QIIME 2 Library](https://develop.qiime2.org/en/2026.1/plugins/how-to-guides/distribute-on-library.html), [tips on how to publicize it](https://develop.qiime2.org/en/2026.1/plugins/how-to-guides/publicize.html), and more.
 
 For the sake of efficiency, QIIME 2 functionality is intentionally decentralized.
 It's generally much quicker to get your tools out there if you're building and distributing your own plugins as opposed to adding functionality to other people's plugins.
