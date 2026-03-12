@@ -16,7 +16,7 @@ While QIIME 2 does not enforce standards for what types of metadata to collect, 
 If you plan to deposit your data in a data archive (e.g. [ENA](https://www.ebi.ac.uk/ena) or [Qiita](https://qiita.ucsd.edu/)), it is also important to determine the types of metadata expected by that resource.
 Different data archives have their own requirements.
 
-For information on how to format your metadata, see [](#q2doc-using-rachis-target:references:metadata-formatting-reference).
+For information on how to format your metadata, see [](#metadata-formatting-reference).
 
 ````{margin}
 ```{admonition} Video

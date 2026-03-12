@@ -1,7 +1,7 @@
-(q2doc-using-rachis-target:how-to-guides:metadata-merge)=
+(metadata-merge)=
 # How to merge metadata
 
-Metadata can come from many different sources, and some QIIME 2 artifacts also [look and behave a lot like metadata](#q2doc-using-rachis-target:how-to-guides:view-artifacts-as-metadata).
+Metadata can come from many different sources, and some QIIME 2 artifacts also [look and behave a lot like metadata](#view-artifacts-as-metadata).
 QIIME 2 therefore has a few different ways to handle metadata merging.
 
 ## Implicit merging
@@ -41,7 +41,7 @@ This artifact can be used anywhere that a metadata file can be used, or it can b
 ## Merging Artifacts with Metadata
 
 Both implicit and explicit merging of metadata also works with artifacts that can be viewed as metadata.
-(See [](#q2doc-using-rachis-target:how-to-guides:view-artifacts-as-metadata) for details on this concept.)
+(See [](#view-artifacts-as-metadata) for details on this concept.)
 For example, it might be interesting to have the option to color points in an Emperor plot based on the sample alpha diversity, in addition to the typical sample metadata.
 This can be accomplished by providing both the sample metadata file *and* the ``SampleData[AlphaDiversity]`` artifact as metadata files in an implicit merge:
 
