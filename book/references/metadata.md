@@ -1,4 +1,4 @@
-(metadata-formatting-reference)=
+(q2doc-using-rachis-target:references:metadata-formatting-reference)=
 # Metadata file format
 
 QIIME 2 metadata is most commonly[^metadata-tsv-exception] stored in a [TSV (i.e. tab-separated values)](https://en.wikipedia.org/wiki/Tab-separated_values) file.
@@ -252,5 +252,5 @@ If a row doesn't contain as many fields as declared by the header, empty cells w
 
 
 [^metadata-tsv-exception]: In addition to TSV files, some QIIME 2 Artifacts (i.e. `.qza` files) can also be used as metadata.
- See [](#view-artifacts-as-metadata) for details.
+ See [](#q2doc-using-rachis-target:how-to-guides:view-artifacts-as-metadata) for details.
 [^36-characters]: The length recommended here (36 characters or less) is designed to be as short as possible while still supporting version 4 UUIDs formatted with dashes.

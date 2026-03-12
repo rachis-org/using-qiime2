@@ -1,4 +1,4 @@
-(view-visualizations)=
+(q2doc-using-rachis-target:how-to-guides:view-visualizations)=
 # How to view Visualizations
 
 ## QIIME 2 View

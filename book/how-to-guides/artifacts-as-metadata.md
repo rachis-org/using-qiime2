@@ -1,4 +1,4 @@
-(view-artifacts-as-metadata)=
+(q2doc-using-rachis-target:how-to-guides:view-artifacts-as-metadata)=
 # How to use Artifacts as Metadata
 
 In addition to TSV metadata files, QIIME 2 also supports viewing some kinds of artifacts as metadata.

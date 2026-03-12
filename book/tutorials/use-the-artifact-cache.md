@@ -1,4 +1,4 @@
-(artifact-cache-tutorial)=
+(q2doc-using-rachis-target:tutorials:artifact-cache-tutorial)=
 # Using an Artifact Cache
 
 An artifact cache allows users to have finer control over where and how QIIME 2 {term}`Results <Result>` are stored on disk.
@@ -257,6 +257,3 @@ As always, be very careful with `rm` - there's no undo!
 ```shell
 rm -r my-cache
 ```
-
-
-
