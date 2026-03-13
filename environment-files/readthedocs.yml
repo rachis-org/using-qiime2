@@ -7,6 +7,6 @@ dependencies:
   - nodejs
   - pip
   - pip:
-    - jupyter-book==2.0.0b1
+    - jupyter-book
     - q2doc@git+https://github.com/qiime2/sphinx-ext-qiime2.git@master
     - q2-dwq2@git+https://github.com/caporaso-lab/q2-dwq2.git@main
