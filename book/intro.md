@@ -1,12 +1,12 @@
 # *Using QIIME 2*
 
-**Your guide to becoming a QIIME 2 Framework power user.**
+**Your guide to becoming a QIIME 2 and MOSHPIT power user.**
 
 ## Start reading here 👋
 
 :::{div}
 :class: col-body-left
-As the ecosystem of QIIME 2 {term}`distributions <distribution>` and {term}`plugins <plugin>` continues to grow, it has become necessary to make a split in the documentation between general-purpose information that describes how to use the **QIIME 2 Framework** (Q2F), and how to apply the tools that build on it to achieve your data analysis goals.
+As the ecosystem of {term}`distributions <distribution>` and {term}`plugins <plugin>` continues to grow, it has become necessary to make a split in the documentation between general-purpose information that describes how to use `rachis` ([formerly known as the QIIME 2 Framework or Q2F](xref:rachis-news-target#q2f-transition)), and how to apply the tools that build on it to achieve your data analysis goals.
 :::
 
 :::{div}
@@ -30,7 +30,7 @@ As the ecosystem of QIIME 2 {term}`distributions <distribution>` and {term}`plug
 :::
 -->
 
-We know that you're interested in QIIME 2 primarily for the latter - to achieve specific analysis goals related to microbiome data science - so we'll start by providing references to where you can find that information.
+We know that you're interested in QIIME 2, MOSHPIT, and other `rachis`-based tools primarily for the latter - to achieve specific analysis goals related to microbiome data science - so we'll start by providing references to where you can find that information.
 Generally, the [QIIME 2 Library *Stacks*](https://library.qiime2.org/docs) are the place to go to find links to all of the documentation sources.
 
 
@@ -61,20 +61,20 @@ The list of these is growing, but some current (as of 28 February 2025) examples
 
 We expect to increasingly have documentation that is focused on analysis of specific interesting data sets.
 Good examples are the new [gut-to-soil tutorial](https://gut-to-soil-tutorial.readthedocs.io/en/latest/) and the classic [Moving Pictures tutorial](https://moving-pictures-tutorial.readthedocs.io/en/latest/).
-These will sometimes cross distributions and stand-alone plugins, for example integrating tools from *MOSHPIT*, `q2-boots`, and perhaps even [metabolomics plugins](https://doi.org/10.1038/s41596-024-01046-3), to illustrate microbiome multi-omics analysis workflows.
+These will sometimes cross distributions and stand-alone plugins, for example integrating tools from *QIIME 2* and *MOSHPIT* , and perhaps even [metabolomics plugins](https://doi.org/10.1038/s41596-024-01046-3), to illustrate microbiome multi-omics analysis workflows.
 
-### QIIME 2 Framework (Q2F) documentation 💃🏻
+### `rachis` documentation 💃🏻
 
-So what is *Using QIIME 2?*
+So what is *Using QIIME 2?*[^1]
 
-*Using QIIME 2* serves as a source for you to refer to when you need to accomplish specific tasks that are general to using the **QIIME 2 Framework (Q2F)**.
-The distributions and plugins described above are all built on Q2F, so *Using QIIME 2* presents information that is general to all of them.
+*Using QIIME 2* serves as a source for you to refer to when you need to accomplish specific tasks that are general to using `rachis`.
+The distributions and plugins described above are all built on `rachis`, so *Using QIIME 2* presents information that is general to all of them.
 That includes things like [using `Artifacts` as metadata](#view-artifacts-as-metadata), [replaying provenance](https://github.com/caporaso-lab/using-qiime2/issues/13), [creating and using an artifact cache](#artifact-cache-tutorial), [configuring](#parallel-configuration) and [using](#parallel-tutorial) our [Parsl](http://parsl-project.org/)-based parallel computing framework, and more.
 
-*Using QIIME 2* will also include chapters that can help you understand the system when you want to go deeper, including things like what QIIME 2 {term}`Artifacts <artifact>` (e.g., {term}`.qza <qza>` files) and {term}`Visualizations <visualization>` (e.g., {term}`.qzv <qzv>` files) [are](https://github.com/caporaso-lab/using-qiime2/issues/11), and [why you need to import your data before using QIIME 2](https://github.com/caporaso-lab/using-qiime2/issues/12).
+*Using QIIME 2* will also include chapters that can help you understand the system when you want to go deeper, including things like what {term}`Artifacts <artifact>` (e.g., {term}`.qza <qza>` files) and {term}`Visualizations <visualization>` (e.g., {term}`.qzv <qzv>` files) [are](https://github.com/caporaso-lab/using-qiime2/issues/11), and [why you need to import your data before using QIIME 2](https://github.com/caporaso-lab/using-qiime2/issues/12).
 **Understanding these topics will help you carry out advanced biological data science workflows and manage the corresponding data, but they aren't strictly necessary for performing data with tools that build on QIIME 2.**
 
-If you're ready to become a QIIME 2 Framework power user, read on...
+If you're ready to become a `rachis` power user, read on...
 
 
 ```{admonition} Development status of this content
@@ -135,3 +135,5 @@ Initial support for the development of QIIME 2 was provided through a [grant](ht
 ## License
 
  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://use.qiime2.org">Using QIIME 2</a> led by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://cap-lab.bio">Greg Caporaso</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0.</p>
+
+[^1]: *Using QIIME 2* will soon be renamed *Using rachis*, to reflect [the recent rebrand of the QIIME 2 Framework](xref:rachis-news-target#q2f-transition).

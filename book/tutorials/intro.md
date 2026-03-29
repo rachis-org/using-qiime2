@@ -1,23 +1,23 @@
 (tutorial-setup)=
 # Getting started
 
-The tutorials in *Using QIIME 2* provide basic information on how to use the QIIME 2 framework, {term}`q2cli` (i.e., the official QIIME 2 command line interface), and the QIIME 2 Python 3 API.
-The tutorials make use of the *Tiny Distribution*, and the QIIME 2 example plugin `q2-dwq2`.
-This deployment allows for in-depth learning of how QIIME 2 itself works, and the information you learn here will be relevant across all QIIME 2 distributions.
+The tutorials in *Using QIIME 2* provide basic information on how to use `rachis` ([formerly known as the QIIME 2 Framework](xref:rachis-news-target#q2f-transition)), {term}`q2cli` (i.e., the official `rachis` command line interface), and the Python 3 API.
+The tutorials make use of the *Tiny Distribution*, and the example plugin `q2-dwq2`.
+This deployment allows for in-depth learning of how `rachis` itself works, and the information you learn here will be relevant across all distributions, including [QIIME 2](https://amplicon-docs.qiime2.org), [MOSHPIT](https://moshpit.qiime2.org), and [stand-alone plugins]((xref:rachis-news-target#term-stand-alone-plugin) such as [`genome-sampler`](https://genome-sampler.readthedocs.io/en/stable/).
 When you're ready to perform your own data analysis you'll transition to domain-specific plugins or distributions and their documentation.
 
 Before attempting to run the *Using QIIME 2* tutorials, configure your learning environment following the steps here.
 
-## Install the QIIME 2 "Tiny Distribution"
+## Install the "Tiny Distribution"
 
-The QIIME 2 "Tiny Distribution" is a minimal set of QIIME 2 functionality for building and using plugins through the QIIME 2 command line or Python 3 API.
-Install the most recent release version of the *QIIME 2 Tiny Distribution* using the [instructions on the QIIME 2 Library](https://library.qiime2.org/quickstart/tiny).
+The "Tiny Distribution" is a minimal set of functionality for building and using plugins through the command line or Python 3 API.
+Install the most recent release version of the *Tiny Distribution* using the [instructions on the QIIME 2 Library](https://library.qiime2.org/quickstart/tiny).
 
 ## Activate the ``conda`` environment and test your installation
 
 You can now activate the environment you just created using `conda activate`, as described in the installation instructions.
 
-To test your QIIME 2 environment, run:
+To test your environment, run:
 
 ```bash
 qiime info
@@ -39,13 +39,13 @@ types: 2025.4.0
 ...
 ```
 
-At this stage you have a working QIIME 2 environment, but it doesn't do a whole lot.
-To add some bioinformatics functionality, we'll next add the QIIME 2 example plugin [`q2-dwq2`](https://github.com/caporaso-lab/q2-dwq2).
+At this stage you have a working environment, but it doesn't do a whole lot.
+To add some bioinformatics functionality, we'll next add the example plugin [`q2-dwq2`](https://github.com/caporaso-lab/q2-dwq2).
 
 ## Install q2-dwq2
 
-All domain-specific functionality in QIIME 2 comes in the form of plugins.
-Sometimes you'll install these directly, and sometimes you'll install QIIME 2 distributions which are bundles of plugins intended to be used together.
+All domain-specific functionality comes in the form of plugins.
+Sometimes you'll install these directly, and sometimes you'll install distributions like QIIME 2 or MOSHPIT which are bundles of plugins intended to be used together.
 In this case, we're going to install one specific plugin.
 Run the following command from your `using-qiime2` conda environment (i.e., after having run `conda activate using-qiime2`).
 
