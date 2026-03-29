@@ -8,5 +8,5 @@ dependencies:
   - pip
   - pip:
     - jupyter-book
-    - q2doc@git+https://github.com/qiime2/sphinx-ext-qiime2.git@master
+    - q2doc@git+https://github.com/qiime2/q2doc@dev
     - q2-dwq2@git+https://github.com/caporaso-lab/q2-dwq2.git@main

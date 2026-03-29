@@ -9,7 +9,7 @@ project:
     - '**.ipynb_checkpoints'
   github: caporaso-lab/using-qiime2
   references:
-    rachis-glossary-target: https://news.rachis.org/en/latest/
+    rachis-news-target: https://news.rachis.org/en/latest/
     rachis-library-target: https://library.qiime2.org
   exports:
     - format: pdf

@@ -1,7 +1,7 @@
 (glossary)=
 # Glossary
 
-```{embed} xref:rachis-glossary-target#rachis-glossary
+```{embed} xref:rachis-news-target#rachis-glossary
 ```
 
 <!--
