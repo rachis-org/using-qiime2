@@ -75,7 +75,7 @@ podman \
 ````
 `````
 
-The above commands will require modification to replace `<distribution>` with the QIIME 2 {term}`distribution` that you'd like to install, and to replace `<epoch>` with the QIIME 2 {term}`epoch` that you'd like to install.
+The above commands will require modification to replace `<distribution>` with the QIIME 2 [distribution](xref:rachis-news-target#term-distribution) that you'd like to install, and to replace `<epoch>` with the QIIME 2 [epoch](xref:rachis-news-target#term-epoch) that you'd like to install.
 For example, if you'd like to install the metagenome distribution from the 2024.10 epoch, your quay.io URL would look like:
 
 ```

@@ -169,7 +169,7 @@ This bypasses the column type inference described above.
 This can be useful if there is a column that appears to be numeric, but should actually be treated as categorical metadata (e.g. a `Subject` column where subjects are labeled `1`, `2`, `3`, etc.).
 Explicitly declaring a column's type also makes your metadata file more descriptive because the intended column type is included with the metadata, instead of relying on software to infer the type (which isn't always transparent).
 
-You can add a *comment directive* to declare column types in your metadata file manually or through the {term}`q2cli` command line utilities (call `qiime tools`).
+You can add a *comment directive* to declare column types in your metadata file manually or through the [q2cli](xref:rachis-news-target#term-q2cli) command line utilities (call `qiime tools`).
 
 For manual specifications within your metadata file(s), comment directive line(s) must appear **directly** below the header.
 The row's first cell must be `#q2:types` to indicate the row is a *comment directive*.
@@ -177,7 +177,7 @@ Subsequent cells may contain the values `categorical` or `numeric` (both case-in
 The empty cell is also supported if you do not wish to assign a type to a column (the type will be inferred in that case).
 Thus, it is easy to include this comment directive without having to declare types for every column in your metadata.
 
-This functionality is now also supported directly through {term}`q2cli` by calling `qiime tools cast-metadata`.
+This functionality is now also supported directly through [q2cli](xref:rachis-news-target#term-q2cli) by calling `qiime tools cast-metadata`.
 This utility allows for bulk specifications to your metadata file(s) column types, set to either **categorical** or **numeric**.
 This tool utilizes the aforementioned comment directive, but allows for inline data manipulation (or the ability to automate column type assignment through a custom script), which can be a more robust method than manual file manipulation.
 

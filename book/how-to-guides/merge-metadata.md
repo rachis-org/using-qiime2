@@ -68,7 +68,7 @@ QIIME 2 doesn't attempt to resolve that - it's up to you to do that.
 Our current recommendations for how to handle a case like this are:
  - If the overlapping columns do not contain conflicting information, don't duplicate them across metadata files.
    Instead, delete the duplicated column(s) from one of the files.
-   Duplicating this type of information is generally considered to be a bad research data management practice, and is a violation of the {term}`DRY` principle.
+   Duplicating this type of information is generally considered to be a bad research data management practice, and is a violation of the [DRY](xref:rachis-news-target#term-dry) principle.
  - If the overlapping column(s) do contain conflicting information, determine whether this is an error or not.
    If it's an error, figure out which of the conflicting values are the right one, fix the issue, and delete the duplicated column from one of the files.
    If it's not an error, that probably means that the column(s) are not named well (i.e., the same name is being used to mean two different things).

@@ -11,7 +11,7 @@ QIIME 2 visualizations can be loaded at [QIIME 2 View](https://view.qiime2.org).
 
 ## q2cli
 
-If you're using {term}`q2cli` on a computer with an active display (i.e., not one that you're connected to over ssh), you should be able to view your visualization by calling `qiime tools view`.
+If you're using [q2cli](xref:rachis-news-target#term-q2cli) on a computer with an active display (i.e., not one that you're connected to over ssh), you should be able to view your visualization by calling `qiime tools view`.
 
 ## Jupyter Notebooks: Experimental
 

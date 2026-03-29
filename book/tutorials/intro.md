@@ -1,9 +1,9 @@
 (tutorial-setup)=
 # Getting started
 
-The tutorials in *Using QIIME 2* provide basic information on how to use `rachis` ([formerly known as the QIIME 2 Framework](xref:rachis-news-target#q2f-transition)), {term}`q2cli` (i.e., the official `rachis` command line interface), and the Python 3 API.
+The tutorials in *Using QIIME 2* provide basic information on how to use `rachis` ([formerly known as the QIIME 2 Framework](xref:rachis-news-target#q2f-transition)), [q2cli](xref:rachis-news-target#term-q2cli) (i.e., the official `rachis` command line interface), and the Python 3 API.
 The tutorials make use of the *Tiny Distribution*, and the example plugin `q2-dwq2`.
-This deployment allows for in-depth learning of how `rachis` itself works, and the information you learn here will be relevant across all distributions, including [QIIME 2](https://amplicon-docs.qiime2.org), [MOSHPIT](https://moshpit.qiime2.org), and [stand-alone plugins]((xref:rachis-news-target#term-stand-alone-plugin) such as [`genome-sampler`](https://genome-sampler.readthedocs.io/en/stable/).
+This deployment allows for in-depth learning of how `rachis` itself works, and the information you learn here will be relevant across all distributions, including [QIIME 2](https://amplicon-docs.qiime2.org), [MOSHPIT](https://moshpit.qiime2.org), and [stand-alone plugins]((xref:rachis-news-target#term-term-stand-alone-plugin) such as [`genome-sampler`](https://genome-sampler.readthedocs.io/en/stable/).
 When you're ready to perform your own data analysis you'll transition to domain-specific plugins or distributions and their documentation.
 
 Before attempting to run the *Using QIIME 2* tutorials, configure your learning environment following the steps here.
@@ -78,7 +78,7 @@ To see the list of available plugins, along with some additional information, ru
 qiime --help
 ```
 
-To see what functionality, or {term}`Actions <action>` a plugin defines, call help on that plugin:
+To see what functionality, or [Actions](xref:rachis-news-target#term-action) a plugin defines, call help on that plugin:
 
 ```shell
 qiime dwq2 --help
