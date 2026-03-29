@@ -6,7 +6,7 @@
 
 :::{div}
 :class: col-body-left
-As the ecosystem of {term}`distributions <distribution>` and {term}`plugins <plugin>` continues to grow, it has become necessary to make a split in the documentation between general-purpose information that describes how to use `rachis` ([formerly known as the QIIME 2 Framework or Q2F](xref:rachis-news-target#q2f-transition)), and how to apply the tools that build on it to achieve your data analysis goals.
+As the ecosystem of [distributions](xref:rachis-news-target#term-distribution) and [plugins](xref:rachis-news-target#term-plugin) continues to grow, it has become necessary to make a split in the documentation between general-purpose information that describes how to use `rachis` ([formerly known as the QIIME 2 Framework or Q2F](xref:rachis-news-target#q2f-transition)), and how to apply the tools that build on it to achieve your data analysis goals.
 :::
 
 :::{div}
@@ -71,7 +71,7 @@ So what is *Using QIIME 2?*[^1]
 The distributions and plugins described above are all built on `rachis`, so *Using QIIME 2* presents information that is general to all of them.
 That includes things like [using `Artifacts` as metadata](#view-artifacts-as-metadata), [replaying provenance](https://github.com/caporaso-lab/using-qiime2/issues/13), [creating and using an artifact cache](#artifact-cache-tutorial), [configuring](#parallel-configuration) and [using](#parallel-tutorial) our [Parsl](http://parsl-project.org/)-based parallel computing framework, and more.
 
-*Using QIIME 2* will also include chapters that can help you understand the system when you want to go deeper, including things like what {term}`Artifacts <artifact>` (e.g., {term}`.qza <qza>` files) and {term}`Visualizations <visualization>` (e.g., {term}`.qzv <qzv>` files) [are](https://github.com/caporaso-lab/using-qiime2/issues/11), and [why you need to import your data before using QIIME 2](https://github.com/caporaso-lab/using-qiime2/issues/12).
+*Using QIIME 2* will also include chapters that can help you understand the system when you want to go deeper, including things like what [Artifacts](xref:rachis-news-target#term-artifact) (e.g., [.qza](xref:rachis-news-target#term-qza) files) and [Visualizations](xref:rachis-news-target#term-visualization) (e.g., [.qzv](xref:rachis-news-target#term-qzv) files) [are](https://github.com/caporaso-lab/using-qiime2/issues/11), and [why you need to import your data before using QIIME 2](https://github.com/caporaso-lab/using-qiime2/issues/12).
 **Understanding these topics will help you carry out advanced biological data science workflows and manage the corresponding data, but they aren't strictly necessary for performing data with tools that build on QIIME 2.**
 
 If you're ready to become a `rachis` power user, read on...
@@ -106,7 +106,7 @@ Each serves a different goal for the reader:
   - Provide a discussion intended to aid in **understanding** a specific topic.
 
 * - References
-  - Provide specific **information** (e.g., a list of utilities available through {term}`q2cli`).
+  - Provide specific **information** (e.g., a list of utilities available through [q2cli](xref:rachis-news-target#term-q2cli)).
 ```
 
 You can navigate these sections on the left sidebar.

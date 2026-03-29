@@ -1,19 +1,19 @@
 # How to sign and verify Results
 
-As of 2025.10 release, {term}`Artifacts <artifact>` and {term}`Visualizations <visualization>` (i.e. {term}`Results <result>`) can now contain a cryptographic[^define-cryptography] {term}`Signature <signature>`, thus providing a method for verifying the identity of who created a {term}`Result <result>`.
-Signing of {term}`Results <result>` was introduced to better support secure distribution of machine learning classifiers packaged in `Results`.[^other-results-can-be-signed]
-Because these {term}`Results <result>` contain executable code, they represent more of a security risk than typical `Results` (which contain data files), so this enables users to verify the identity of the creator before using it on their computer where it will have access to sensitive data.
-This is achieved using a new {term}`Annotation <annotation>` sub-type: a {term}`Signature <signature>`.
+As of 2025.10 release, [Artifacts](xref:rachis-news-target#term-artifact) and [Visualizations](xref:rachis-news-target#term-visualization) (i.e. [Results](xref:rachis-news-target#term-result)) can now contain a cryptographic[^define-cryptography] [Signature](xref:rachis-news-target#term-signature), thus providing a method for verifying the identity of who created a [Result](xref:rachis-news-target#term-result).
+Signing of [Results](xref:rachis-news-target#term-result) was introduced to better support secure distribution of machine learning classifiers packaged in `Results`.[^other-results-can-be-signed]
+Because these [Results](xref:rachis-news-target#term-result) contain executable code, they represent more of a security risk than typical `Results` (which contain data files), so this enables users to verify the identity of the creator before using it on their computer where it will have access to sensitive data.
+This is achieved using a new [Annotation](xref:rachis-news-target#term-annotation) sub-type: a [Signature](xref:rachis-news-target#term-signature).
 
 This how-to guide will present:
- - pre-requisites for {term}`signature` creation and verification;
- - how to add a {term}`signature` to an existing {term}`result`;
- - and how to verify a {term}`result` with an attached {term}`signature`.
+ - pre-requisites for [signature](xref:rachis-news-target#term-signature) creation and verification;
+ - how to add a [signature](xref:rachis-news-target#term-signature) to an existing [result](xref:rachis-news-target#term-result);
+ - and how to verify a [result](xref:rachis-news-target#term-result) with an attached [signature](xref:rachis-news-target#term-signature).
 
 ## Pre-requisites for using Signatures
 
-The tool we are leveraging for {term}`signature` creation and verification is [GNU Privacy Guard](https://www.gnupg.org/documentation/index.html) (also known as GnuPG or GPG).
-GPG is free, open-source software and in the context that we use it here, can be used for creating private/public keypairs, signing of {term}`Results <result>`, and verification of {term}`Signatures <signature>` on signed {term}`Results <result>`.
+The tool we are leveraging for [signature](xref:rachis-news-target#term-signature) creation and verification is [GNU Privacy Guard](https://www.gnupg.org/documentation/index.html) (also known as GnuPG or GPG).
+GPG is free, open-source software and in the context that we use it here, can be used for creating private/public keypairs, signing of [Results](xref:rachis-news-target#term-result), and verification of [Signatures](xref:rachis-news-target#term-signature) on signed [Results](xref:rachis-news-target#term-result).
 
 This is all achieved by using a GPG keypair consisting of a private key and public key.
 The private key is used to sign something, and should be securely managed by the signer (i.e. a person or organization) and never shared.
@@ -27,7 +27,7 @@ The public key can be shared publicly.
 :class: dropdown
 
 While installing and using GPG directly on your own machine is safe and recommended, distributing GPG through our Conda environments would require us (as software maintainers) to rely on additional third-party wrappers and distribution channels of GPG.
-These added layers could expose the QIIME 2 {term}`Distribution` process to potential supply-chain or man-in-the-middle attacks whereby the software you (and we) think you're installing is not actually that software.
+These added layers could expose the QIIME 2 [Distribution](xref:rachis-news-target#term-distribution) process to potential supply-chain or man-in-the-middle attacks whereby the software you (and we) think you're installing is not actually that software.
 Because our signature functionality is intended to support secure use of Results, we ask users to install GPG directly from trusted system package sources to minimize risk.
 ```
 
@@ -72,8 +72,8 @@ If you'd like to sign a Result and don't already have a keypair, keep reading he
 (create-a-keypair)=
 ### Create a keypair, if you don't already have one
 
-Before signing {term}`Results <result>`, you'll need to create a GPG keypair if you don't already have one.
-Once GPG is installed on your machine, you can create a new keypair for use in {term}`signature` creation.
+Before signing [Results](xref:rachis-news-target#term-result), you'll need to create a GPG keypair if you don't already have one.
+Once GPG is installed on your machine, you can create a new keypair for use in [signature](xref:rachis-news-target#term-signature) creation.
 
 You can create a new GPG keypair using the following command:
 
@@ -90,7 +90,7 @@ After running this command successfully, you will have create a keypair and adde
 (obtain-keypair-fingerprint)=
 ### Obtain keypair fingerprint
 
-You will need your keypair's fingerprint to sign {term}`Results <result>`.
+You will need your keypair's fingerprint to sign [Results](xref:rachis-news-target#term-result).
 You can obtain the fingerprint of your keypair by using the following command:
 
 ```shell
@@ -116,15 +116,15 @@ In each keypair entry, you will see a line that looks something like this:
 ```
 
 This is the line that contains the keypair fingerprint.
-Note the fingerprint so you can provide it as input when signing {term}`Results <result>`.
+Note the fingerprint so you can provide it as input when signing [Results](xref:rachis-news-target#term-result).
 
 (sign-result)=
 ## Signing a Result
 
-Using your [keypair fingerprint](obtain-keypair-fingerprint), you can create a new {term}`Signature <signature>` annotation to sign {term}`Results <result>`.
-Note that only {term}`Results <result>` created with QIIME 2 version 2025.4 (or newer) can be signed.
+Using your [keypair fingerprint](obtain-keypair-fingerprint), you can create a new [Signature](xref:rachis-news-target#term-signature) annotation to sign [Results](xref:rachis-news-target#term-result).
+Note that only [Results](xref:rachis-news-target#term-result) created with QIIME 2 version 2025.4 (or newer) can be signed.
 
-Below is the workflow for signing an example {term}`Result <result>` (`my-result.qza`) with an example keypair fingerprint.
+Below is the workflow for signing an example [Result](xref:rachis-news-target#term-result) (`my-result.qza`) with an example keypair fingerprint.
 
 `````{tab-set}
 
@@ -166,11 +166,11 @@ Instructions for verifying signed results follow.
 [You may need to install `gpg`](install-gpg) before running the commands in this section.
 ```
 
-A signed {term}`Result <result>` (either created by you or provided by someone else) can be verified by anyone who has the signer's public key in their GPG keyring[^exchanging-gpg-keys].
+A signed [Result](xref:rachis-news-target#term-result) (either created by you or provided by someone else) can be verified by anyone who has the signer's public key in their GPG keyring[^exchanging-gpg-keys].
 
-Below is the workflow for verifying a signed {term}`result` using an example {term}`result`.
+Below is the workflow for verifying a signed [result](xref:rachis-news-target#term-result) using an example [result](xref:rachis-news-target#term-result).
 
-First, find the name of the signature that you'd like to verify by running the following command to list all {term}`annotations <annotation>` attached to the {term}`result`. These will be the `Annotations` of type `Signature`, and you should note the corresponding `name` value.
+First, find the name of the signature that you'd like to verify by running the following command to list all [annotations](xref:rachis-news-target#term-annotation) attached to the [result](xref:rachis-news-target#term-result). These will be the `Annotations` of type `Signature`, and you should note the corresponding `name` value.
 
 `````{tab-set}
 
@@ -224,7 +224,7 @@ result.verify('signature-name')
 ````
 `````
 
-If the {term}`Signature <signature>` is verified successfully, you will see the following:
+If the [Signature](xref:rachis-news-target#term-signature) is verified successfully, you will see the following:
 
 `````{tab-set}
 
@@ -241,11 +241,11 @@ Signature signature-name on Result signed-result.qza verified successfully.
 ````
 `````
 
-If {term}`Signature <signature>` verification fails, you will receive an error message with details on the failure.
-If verification fails, you should not use the {term}`result <Result>` and contact the person or organization who you were expecting to obtain it from to let them know that signature verification failed.
+If [Signature](xref:rachis-news-target#term-signature) verification fails, you will receive an error message with details on the failure.
+If verification fails, you should not use the [result](xref:rachis-news-target#term-result) and contact the person or organization who you were expecting to obtain it from to let them know that signature verification failed.
 
 
-[^other-results-can-be-signed]: While this functionality was developed for the purpose of securing machine learning classifiers (to assert the identity of the person or organization who trained them), it can be used for any type of {term}`result <Result>` when you'd like to prove that it is coming from a trusted source.
+[^other-results-can-be-signed]: While this functionality was developed for the purpose of securing machine learning classifiers (to assert the identity of the person or organization who trained them), it can be used for any type of [result](xref:rachis-news-target#term-result) when you'd like to prove that it is coming from a trusted source.
 [^exchanging-gpg-keys]: [This section](https://www.gnupg.org/gph/en/manual.html#AEN57) of the GPG documentation walks through exchanging public keys, which includes both how to export your public key to share with someone, and how to import someone else's public key to your keyring.
 [^define-cryptography]: Cryptography: the discipline concerned with communication security (eg, confidentiality of messages, integrity of messages, sender authentication, non-repudiation of messages, and many other related issues), regardless of the used medium such as pencil and paper or computers.
  This definition was [obtained from wiktionary](https://en.wiktionary.org/wiki/cryptography), accessed on 17 Nov 2025.

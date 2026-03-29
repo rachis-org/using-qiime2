@@ -1,7 +1,7 @@
 (artifact-cache-tutorial)=
 # Using an Artifact Cache
 
-An artifact cache allows users to have finer control over where and how QIIME 2 {term}`Results <Result>` are stored on disk.
+An artifact cache allows users to have finer control over where and how QIIME 2 [Results](xref:rachis-news-target#term-result) are stored on disk.
 
 Artifact caches serve two primary purposes:
 1. Providing the user with control over where QIIME 2 stores its working (temporary) files.
@@ -22,7 +22,7 @@ The only exception is if you'd like to delete a cache, in which case you can jus
 
 ## A use case for the artifact cache
 
-Consider a use case where you have a very large artifact, say an 80 gigabyte reference sequence database, and you are regularly using this database as an input to QIIME 2 {term}`Actions <Action>` on a cluster.
+Consider a use case where you have a very large artifact, say an 80 gigabyte reference sequence database, and you are regularly using this database as an input to QIIME 2 [Actions](xref:rachis-news-target#term-action) on a cluster.
 It would be ideal to avoid constantly unzipping this large database into and out of a `.qza` file.
 It may also be ideal to store this artifact in a location that all users and all worker nodes on the cluster have access to, to avoid multiple copies of this file being stored on the system (e.g., under different users' home directories).
 
@@ -257,6 +257,3 @@ As always, be very careful with `rm` - there's no undo!
 ```shell
 rm -r my-cache
 ```
-
-
-

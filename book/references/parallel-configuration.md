@@ -1,7 +1,7 @@
 (parallel-configuration)=
 # Parallel Pipeline configuration
 
-QIIME 2 provides formal support for parallel computing of {term}`Pipelines <pipeline>` through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>).
+QIIME 2 provides formal support for parallel computing of [Pipelines](xref:rachis-news-target#term-pipeline) through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>).
 
 ## Parsl configuration
 
@@ -123,7 +123,7 @@ Another parameter to the config that we do not set but that you should definitel
 This indicates the directory that Parsl will write logging info to and it defaults to `./runinfo`.
 This means that if you run a QIIME 2 Pipeline in parallel without this parameter set, a `runinfo` directory will be created inside the directory that you ran the action from.
 
-### Mapping {term}`Actions <action>` to executors
+### Mapping [Actions](xref:rachis-news-target#term-action) to executors
 
 An executor mapping can be added to your Parsl configuration that defines which actions should run on which executors.
 If an action is unmapped, it will run on the default executor.
@@ -141,7 +141,7 @@ action_name = "tpool"
 (view-parsl-configuration)=
 ### Viewing the current configuration
 
-Using {term}`q2cli`, you can see your current `qiime2_config.toml` file by running:
+Using [q2cli](xref:rachis-news-target#term-q2cli), you can see your current `qiime2_config.toml` file by running:
 
 ```shell
 qiime info --config-level 2
@@ -160,10 +160,10 @@ When QIIME 2 needs configuration information, the following precedence order is 
 If no configuration is found after checking those four locations, QIIME 2 writes a default configuration file to `$CONDA_PREFIX/etc/qiime2_config.toml` and uses that.
 This implies that after your first time running QIIME 2 in parallel without a config in at least one of the first 3 locations, the path referenced in step 4 will exist and contain a configuration file.
 
-Alternatively, when using {term}`q2cli`, you can provide a specific configuration for use in configuring Parsl using the `--parallel-config` option.
+Alternatively, when using [q2cli](xref:rachis-news-target#term-q2cli), you can provide a specific configuration for use in configuring Parsl using the `--parallel-config` option.
 If provided, this overrides the priority order above.
 
-Similarly, when using the {term}`Python 3 API`, you can provide a specific configuration by passing a `parsl.Config` object into your `ParallelConfig` context manager.
+Similarly, when using the [Python 3 API](xref:rachis-news-target#term-python 3 API), you can provide a specific configuration by passing a `parsl.Config` object into your `ParallelConfig` context manager.
 
 ````{admonition} user_config_dir and site_config_dir
 :class: note

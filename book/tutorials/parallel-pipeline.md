@@ -1,11 +1,11 @@
 (parallel-tutorial)=
 # Using parallel Pipeline execution
 
-QIIME 2 provides formal support for parallel computing of {term}`Pipelines <pipeline>` through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>).[^formal-informal-parallel]
+QIIME 2 provides formal support for parallel computing of [Pipelines](xref:rachis-news-target#term-pipeline) through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>).[^formal-informal-parallel]
 This allows for faster execution of QIIME 2 `Pipelines`, assuming the compute resources are available, by ensuring that pipeline steps that can run simultaneously do run simultaneously.
 
 Parallel Pipeline execution is accessible in different ways depending on which interface you're using.
-Here we illustrate how to run `Pipelines` in parallel using {term}`q2cli` and {term}`QIIME 2's Python 3 API <Python 3 API>`.
+Here we illustrate how to run `Pipelines` in parallel using [q2cli` and {term}`QIIME 2's Python 3 API](xref:rachis-news-target#term-python 3 API).
 
 ````{admonition} Reminder
 :class: tip
@@ -130,5 +130,5 @@ with ParallelConfig(parallel_config=c, action_executor_mapping=m):
 
 To learn how to configure Parsl for your own usage, refer to [](#parallel-configuration).
 
-[^formal-informal-parallel]: QIIME 2 {term}`Actions <Action>` can provide formal (i.e., Parsl-based) or informal (e.g., multi-threaded execution of a third party program) parallel computing support.
+[^formal-informal-parallel]: QIIME 2 [Actions](xref:rachis-news-target#term-action) can provide formal (i.e., Parsl-based) or informal (e.g., multi-threaded execution of a third party program) parallel computing support.
  To learn more about the distinction, see [](#types-of-parallel-support).

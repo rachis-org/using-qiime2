@@ -3,7 +3,7 @@
 
 QIIME 2 will automatically validate a metadata file anytime it is used.
 This will inform you of any errors in your metadata formatting, which you can then correct.
-To test this, you can use the `qiime metadata tabulate` command, which will read your metadata file and produce a nicely formatting view in a QIIME 2 {term}`Visualization`.
+To test this, you can use the `qiime metadata tabulate` command, which will read your metadata file and produce a nicely formatting view in a QIIME 2 [Visualization](xref:rachis-news-target#term-visualization).
 
 ```{admonition} Warning: Do not include confidential information in your metadata.
 :class: warning
