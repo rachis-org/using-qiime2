@@ -1,9 +1,9 @@
 channels:
-- https://packages.qiime2.org/qiime2/2026.4/tiny/passed
+- https://packages.qiime2.org/qiime2/2026.7/tiny/passed
 - conda-forge
 - bioconda
 dependencies:
-  - qiime2-tiny
+  - rachis-tiny
   - nodejs
   - pip
   - pip:
