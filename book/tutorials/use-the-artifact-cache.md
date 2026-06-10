@@ -156,7 +156,7 @@ qiime dwq2 search-and-summarize \
     --m-reference-metadata-file reference-metadata.tsv \
     --p-split-size 1 \
     --o-hits hits.qza \
-    --o-hits-table hits-table.qzv
+    --o-hits-table hits-table.qzv \
     --use-cache my-cache
 ```
 ````
