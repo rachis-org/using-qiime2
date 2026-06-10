@@ -137,8 +137,15 @@ cache.load('my-reference')
 Now, you can reference the artifact from the cache when calling Actions.
 Artifacts in a cache are referenced as `path-to-cache:key`.
 So, as long as you're working in the same directory as where your cache is stored, the following command should run.
+
+You can also use your cache to store all temporary files created by your QIIME 2 action.
+This is done using the `--use-cache` parameter on the cli and by withing in your `Cache` object as a context manager in the Python API.
+It is not mandatory to do this; however, it is recommended to do this any time you are loading data from or saving data to a cache.
+If you are loading data from/saving data to multiple caches in one action, prefer using the one that has the larger amount of data moving into/out of it.
+This will prevent unnecessary copying of data and can save a large amount of time.
+
 (This command does take a couple of minutes to run.
-If you want it to go faster, you can run it in parallel](#parallel-tutorial).)
+If you want it to go faster, you can run it in [parallel](#parallel-tutorial).)
 
 `````{tab-set}
 ````{tab-item} Command line interface
@@ -149,7 +156,8 @@ qiime dwq2 search-and-summarize \
     --m-reference-metadata-file reference-metadata.tsv \
     --p-split-size 1 \
     --o-hits hits.qza \
-    --o-hits-table hits-table.qzv
+    --o-hits-table hits-table.qzv \
+    --use-cache my-cache
 ```
 ````
 
@@ -161,11 +169,12 @@ from qiime2 import Metadata
 reference_from_cache = cache.load('my-reference')
 reference_metadata = Metadata.load('./reference-metadata.tsv')
 
-hits, hits_table = search_and_summarize(
-    query_seqs=query_seqs,
-    reference_seqs=reference_from_cache,
-    reference_metadata=reference_metadata,
-    split_size=1)
+with cache:
+    hits, hits_table = search_and_summarize(
+        query_seqs=query_seqs,
+        reference_seqs=reference_from_cache,
+        reference_metadata=reference_metadata,
+        split_size=1)
 ```
 ````
 `````
@@ -186,7 +195,8 @@ qiime dwq2 search-and-summarize \
     --p-split-size 1 \
     --o-hits my-cache:my-hits \
     --o-hits-table hits-table.qzv \
-    --parallel
+    --parallel \
+    --use-cache my-cache
 ```
 ````
 ````{tab-item} Python 3 API
