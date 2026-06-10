@@ -145,7 +145,7 @@ If you are loading data from/saving data to multiple caches in one action, prefe
 This will prevent unnecessary copying of data and can save a large amount of time.
 
 (This command does take a couple of minutes to run.
-If you want it to go faster, you can run it in parallel](#parallel-tutorial).)
+If you want it to go faster, you can run it in [parallel](#parallel-tutorial).)
 
 `````{tab-set}
 ````{tab-item} Command line interface
