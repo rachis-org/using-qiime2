@@ -186,7 +186,12 @@ python -c "import appdirs; print(appdirs.site_config_dir('qiime2'))"
 ```
 ````
 
-### Configuring Parsl for HPC
+### Configuring Parsl for Multiple HPC Nodes
+
+````{admonition} The extra configuration described here is only needed if you need to use multiple HPC nodes for your pipeline
+:class: note
+If you are running on an HPC but only using a single node, you can just sbatch the pipeline you are running with the `--parallel` flag provided or `--parallel-config` with a non-Slurm provider.
+````
 
 Parsl supports a large number of compute environments via its [providers](https://parsl.readthedocs.io/en/stable/reference.html#providers).
 The HPC cluster used by the QIIME 2 Framework development team, for example, uses [Slurm](https://slurm.schedmd.com/documentation.html).
