@@ -15,7 +15,7 @@ QIIME 2 configuration files are stored on disk in [TOML](https://toml.io/en/) fi
 
 For basic multi-processor usage, QIIME 2 writes a default configuration file the first time it's needed (e.g., if you instruct QIIME 2 to execute in parallel without a particular configuration).
 
-The default `qiime2_config.toml` file, as of QIIME 2 2024.10, looks like the following:
+The default `qiime2_config.toml` file, as of QIIME 2 2026.4, looks like the following:
 
 (default-parsl-configuration-file)=
 ```
