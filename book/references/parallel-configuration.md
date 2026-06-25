@@ -1,7 +1,7 @@
 (parallel-configuration)=
 # Parallel Pipeline configuration
 
-QIIME 2 provides formal support for parallel computing of [Pipelines](xref:rachis-news-target#term-pipeline) through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>).
+QIIME 2 provides formal support for parallel computing of [Pipelines](xref:rachis-news-target#term-pipeline) through [Parsl](https://parsl.readthedocs.io/en/stable/1-parsl-introduction.html>). Running a pipeline in parallel will build out a dependency graph of all of the [Actions](xref:rachis-news-target#term-action) in the pipeline and maximally parallelize the pipeline by running as many actions at the same time as possible. How much a pipeline will benefit from parallelization will vary greatly from pipeline to pipeline.
 
 ## Parsl configuration
 
@@ -15,7 +15,7 @@ QIIME 2 configuration files are stored on disk in [TOML](https://toml.io/en/) fi
 
 For basic multi-processor usage, QIIME 2 writes a default configuration file the first time it's needed (e.g., if you instruct QIIME 2 to execute in parallel without a particular configuration).
 
-The default `qiime2_config.toml` file, as of QIIME 2 2024.10, looks like the following:
+The default `qiime2_config.toml` file, as of QIIME 2 2026.4, looks like the following:
 
 (default-parsl-configuration-file)=
 ```
@@ -186,11 +186,16 @@ python -c "import appdirs; print(appdirs.site_config_dir('qiime2'))"
 ```
 ````
 
-### Configuring Parsl for HPC
+### Configuring Parsl for Multiple HPC Nodes
+
+````{admonition} The extra configuration described here is only needed if you need to use multiple HPC nodes for your pipeline
+:class: note
+If you are running on an HPC but only using a single node, you can just sbatch the pipeline you are running with the `--parallel` flag provided or `--parallel-config` with a non-Slurm provider.
+````
 
 Parsl supports a large number of compute environments via its [providers](https://parsl.readthedocs.io/en/stable/reference.html#providers).
 The HPC cluster used by the QIIME 2 Framework development team, for example, uses [Slurm](https://slurm.schedmd.com/documentation.html).
-As such, we will give an example here of configuring a QIIME 2 action to run in parallel on a Slurm based HPC cluster using Parsl's SlurmProvider.
+As such, we will give an example here of configuring a QIIME 2 pipeline to run in parallel on a Slurm based HPC cluster using Parsl's SlurmProvider.
 
 This is what a QIIME 2 config for running on Slurm looks like at a high level.
 
@@ -332,17 +337,17 @@ We will have 10 different sets of sequences each of which can be submitted to it
 The 20 threads here corresponds to our 20 `cores_per_worker`.
 This allows us to classify `num_blocks * workers_per_block * cores_per_worker` or `10 * 1 * 20 = 200` sequences at a time.
 
-We make sure to set our `TMPDIR` and the [Artifact Cache](#artifact-cache-tutorial) we are using for this action to a location that is accessible globally on the HPC we are using.
+We make sure to set our `TMPDIR` and the [Artifact Cache](#artifact-cache-tutorial) we are using for this action to locations that are accessible globally on the HPC we are using.
 It is important that you do this to make sure your actions which will be spread across compute nodes are writing information that needs to be shared amongst them to a location they can all see.
 
 This job has a walltime of 24 hours which is significantly longer than the jobs we will be submitting.
-This is because it can take some time after your pilot job starts running for your worker jobs to actually start running.
+This is because it can take some time after your pilot job starts running for your worker jobs to actually start running. You submit this pilot, Slurm determines when the pilot starts running, the pilot submits the workers, Slurm determines when the workers start running.
 This job also only asks for 8GB of RAM.
 This is because this job doesn't do any of the actual computation, so it doesn't require a large amount of compute resources.
 
 ````{admonition} We understand this can be difficult!
 :class: note
-We understand that figuring out how to set up your parallel config for a given action can be difficult.
-It requires you to understand not only your data and the action you are trying to run but also your compute system.
+We understand that figuring out how to set up your parallel config for a given pipeline can be difficult.
+It requires you to understand not only your data and the pipeline you are trying to run but also your compute system.
 If you need help with this do not hesitate to post on [the QIIME 2 forum](https://forum.qiime2.org).
 ````
