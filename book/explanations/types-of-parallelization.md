@@ -1,5 +1,5 @@
 (types-of-parallel-support)=
-# Types of parallel computing support
+# Types of Parallel Computing Support
 
 ## Parallel Pipeline execution
 
