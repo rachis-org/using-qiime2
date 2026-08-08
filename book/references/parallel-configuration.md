@@ -197,6 +197,12 @@ Parsl supports a large number of compute environments via its [providers](https:
 The HPC cluster used by the QIIME 2 Framework development team, for example, uses [Slurm](https://slurm.schedmd.com/documentation.html).
 As such, we will give an example here of configuring a QIIME 2 pipeline to run in parallel on a Slurm based HPC cluster using Parsl's SlurmProvider.
 
+```{admonition} See also
+:class: tip
+For ready-to-adapt local and Slurm configuration files, refer to [](#parallel-config-toml).
+For a step-by-step worked example of running a `Pipeline` on Slurm, refer to [](#parallel-on-slurm).
+```
+
 This is what a QIIME 2 config for running on Slurm looks like at a high level.
 
 ```
