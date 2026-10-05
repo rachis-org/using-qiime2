@@ -9,7 +9,7 @@ lint:
 	  --verbose
 
 html:
-	cd book && Q2DOC_BASE_COMMAND='qiime2' jupyter book build --html
+	cd book && Q2DOC_BASE_COMMAND='qiime' jupyter book build --html
 
 clean:
 	cd book && jupyter book clean
