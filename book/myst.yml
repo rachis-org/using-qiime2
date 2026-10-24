@@ -29,6 +29,8 @@ project:
         - file: how-to-guides/artifacts-as-metadata.md
         - file: how-to-guides/view-visualizations.md
         - file: how-to-guides/pipeline-resumption.md
+        - file: how-to-guides/parallel-config-toml.md
+        - file: how-to-guides/parallel-on-slurm.md
         - file: how-to-guides/use-the-workshop-container.md
         - file: how-to-guides/use-the-galaxy-container.md
         - file: how-to-guides/get-involved.md
